@@ -5,8 +5,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
   <style>
+    tr{
+      background: #1f0403aa;
+    }
     .page {
-      background: #222;
+      background: #1f0403;
+      background-image: url('assets/bg4.jpg'), url('assets/bg5.jpg'), url('assets/bg8.jpg'), url('assets/bg10.jpg'), url('assets/bg7.jpg');
+      background-position: left, 30%, 55%, 80%, right;
+      background-size: contain, contain, contain, contain, contain;
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
       color: #FFF;
       height: 300mm;
       width: 800mm;
@@ -15,6 +22,10 @@
       font-size: 2.8mm;
     }
     .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .flex div{
       display: flex;
     }
     .flex.vertical {
@@ -27,7 +38,7 @@
       width: 100%;
     }
     table, th, td {
-      border: 0.5px solid #666;
+      border: 0.5px solid #B97D10;
       border-collapse: collapse;
     }
     th, td {
@@ -52,26 +63,36 @@
       font-size: 4mm;
     }
 
-    .header > img {
+    .header  img {
       height: 18mm;
     }
-    .header > span {
+    .header  span {
       font-size: 7mm;
       line-height: 18mm;
       margin-left: 2mm
+    }
+    table td:first-child {
+      color: #FBCA03;
     }
   </style>
 </head>
 <body>
   <!-- Original Image: https://www.kindpng.com/imgv/TomTJxJ_cute-angry-anime-girl-hd-png-download/ -->
-  <img src="assets/corner.png" style="position: absolute; top: 200mm; left: 700mm; height: 100mm">
+  <img src="assets/corner_tony_y.png" style="position: absolute; top: 200mm; left: 700mm; height: 100mm">
   <div class="page">
     <div class="content vertical flex">
       <div class="header flex">
-        <img src="assets/riscv-logo-1.png">
-        <span>
-          Reference Sheet
-        </span>
+        <div>
+          <img src="assets/riscv-logo-1.png">
+          <span>
+            Reference Sheet
+          </span>
+          <img style="margin-left: 20px;" src="assets/ironman.png">
+        </div>
+        <div>
+          <img src="assets/MERLLogo_fullwhite.png">
+        </div>
+        
       </div>
       <div class="gap flex">
         <div class="vertical gap flex">
@@ -80,7 +101,7 @@
               <!-- Integer Register -->
               <table>
                 <tr>
-                  <th colspan="4" style="background: #5c6bc0">General registers</th>
+                  <th colspan="4" style="background: #FBCA03; font-weight: bold;">General Registers</th>
                 </tr>
                 <tr>
                   <td>Register</td>
@@ -286,7 +307,7 @@
               <!-- FP Register -->
               <table>
                 <tr>
-                  <th colspan="4" style="background: #ff7043">Floating Point Registers</th>
+                  <th colspan="4" style="background: #FBCA03; font-weight: bold;">Floating Point Registers</th>
                 </tr>
                 <tr>
                   <td>Register</td>
@@ -490,7 +511,7 @@
               <!-- Assembler Directives -->
               <table>
                 <tr>
-                  <th colspan="4" style="background: #757575">Assembler Directives</th>
+                  <th colspan="4" style="background: #FBCA03; font-weight: bold;">Assembler Directives</th>
                 </tr>
                 <tr>
                     <td>Directive</td>
@@ -674,7 +695,7 @@
             <!-- CSR Registers -->
             <table>
               <tr>
-                <th colspan="8" style="background: #7e57c2">CSR Registers (Partial List)</th>
+                <th colspan="8" style="background: #FBCA03; font-weight: bold;">CSR Registers (Partial List)</th>
               </tr>
               <tr>
                 <td>Number</td>
@@ -829,7 +850,7 @@
           <!-- RV32I Integer Instruction -->
           <table>
             <tr>
-              <th colspan="10" style="background: #5c6bc0">RV32I Base Integer Instruction</th>
+              <th colspan="10" style="background: #FBCA03; font-weight: bold;">RV32I Base Integer Instruction</th>
             </tr>
             <tr>
               <td>Inst.</td>
@@ -1299,7 +1320,7 @@
           <!-- zicsr Instruction -->
           <table>
             <tr>
-              <th colspan="10" style="background: #7e57c2">Control and Status Register Instruction Extension (Zicsr)</th>
+              <th colspan="10" style="background: #FBCA03; font-weight: bold;">Control and Status Register Instruction Extension (Zicsr)</th>
             </tr>
             <tr>
               <td>Inst.</td>
@@ -1380,7 +1401,7 @@
           <!-- RV64I Integer Instruction -->
           <table>
             <tr>
-              <th colspan="11" style="background: #78909c">RV64I Base Integer Instruction</th>
+              <th colspan="11" style="background: #FBCA03; font-weight: bold;">RV64I Base Integer Instruction</th>
             </tr>
             <tr>
               <td>Inst.</td>
@@ -1570,7 +1591,7 @@
           <!-- M Instruction -->
           <table>
             <tr>
-              <th colspan="10" style="background: #26a69a">Integer Multiplication and Division Extension (M)</th>
+              <th colspan="10" style="background: #FBCA03; font-weight: bold;">Integer Multiplication and Division Extension (M)</th>
             </tr>
             <tr>
               <td>Inst.</td>
@@ -1630,7 +1651,7 @@
           <!-- A Instruction -->
           <table>
             <tr>
-              <th colspan="10" style="background: #9ccc65">Atomic Instruction Extension (A)</th>
+              <th colspan="10" style="background: #FBCA03; font-weight: bold;">Atomic Instruction Extension (A)</th>
             </tr>
             <tr>
               <td>Inst.</td>
@@ -1708,7 +1729,7 @@
           <!-- zifenci Instruction -->
           <table>
             <tr>
-              <th colspan="10" style="background: #8d6e63">Instruction-Fetch Fence Extension (Zifencei)</th>
+              <th colspan="10" style="background: #FBCA03; font-weight: bold;">Instruction-Fetch Fence Extension (Zifencei)</th>
             </tr>
             <tr>
               <td>Inst.</td>
@@ -1728,7 +1749,7 @@
           <!-- F Instruction -->
           <table>
             <tr>
-              <th colspan="10" style="background: #ff7043">Single-Precision Floating Point Extension (F)</th>
+              <th colspan="10" style="background: #FBCA03; font-weight: bold;">Single-Precision Floating Point Extension (F)</th>
             </tr>
             <tr>
               <td>Inst.</td>
